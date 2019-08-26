@@ -1,5 +1,5 @@
-import { GET_DATA, DATA_RECIEVED } from './actions'
-import { combineReducers } from 'redux'
+import { DATA_RECIEVED } from './actions';
+import { combineReducers } from 'redux';
 
 const initialState = { data: [] }
 

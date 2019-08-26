@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import '../styles/SearchResultList.css'
-import Card from 'react-bootstrap/Card'
+import React, { Component } from 'react';
+import '../styles/SearchResultList.scss';
+import Card from 'react-bootstrap/Card';
 
 export default class SearchResultList extends Component {
     listItem(first, second, third, fourth, key) {
         return (
             <Card key={ key }>
-                <a className="titleLink" href={first}>
+                <a className="listTitleLink" href={first}>
                     <Card.Title>
                         { fourth }
                     </Card.Title>

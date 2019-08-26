@@ -12,7 +12,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(thunk, sagaMiddleware));
 sagaMiddleware.run(rootSaga);
 
-const action = type => store.dispatch({type})
+// const action = type => store.dispatch({type})
 
 export default class App extends Component {
 

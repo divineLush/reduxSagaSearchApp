@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import * as Actions from '../store/actions';
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
+import { minStrLength } from '../assets/consts';
 
 class Root extends Component {
     constructor(props) {
@@ -16,15 +17,16 @@ class Root extends Component {
 
     async onChange(e) {
         await this.setState({ str: e.target.value });
-        this.props.getData(this.state.str);
+        this.props.getData(this.state.str)
     }
 
     form() {
+        const placeholder = 'Enter minimum ' + minStrLength.toString() + ' symbols...'
         return (
             <Form>
             <Form.Group>
                 <Form.Control
-                placeholder="Enter your query..."
+                placeholder={ placeholder }
                 value={ this.state.str }
                 onChange={ this.onChange } 
                 />
@@ -47,12 +49,12 @@ class Root extends Component {
 }
 
 function mapStateToProps(state, props) {
-    let path = state.dataReducer
+    let path = state.dataReducer;
     return { data: path.data }
 }
   
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Actions, dispatch);
+    return bindActionCreators(Actions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Root);
