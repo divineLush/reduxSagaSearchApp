@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Font";
+    src: url("../assets/fonts/BlackDahlia-kerned.ttf");
+}
+
+header {
+    color: #fd9696;
+    background-color: #fdfd96;
+    padding: 20px 17px;
+    text-align: center;
+    font-family: 'Font' ,sans-serif;
+    font-size: 20px;
+    border-bottom: 3px dotted #9696fd;
+}
